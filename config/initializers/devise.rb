@@ -1,4 +1,4 @@
-require 'devise/strategies/authenticatable'
+require 'omniauth/strategies/threefold'
 
 Warden::Manager.after_set_user except: :fetch do |user, warden|
   session_id = warden.cookies.signed['_session_id'] || warden.raw_session['auth_id']
