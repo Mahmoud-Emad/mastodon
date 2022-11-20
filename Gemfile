@@ -23,6 +23,7 @@ gem 'fog-core', '<= 2.1.0'
 gem 'fog-openstack', '~> 0.3', require: false
 gem 'kt-paperclip', '~> 7.1'
 gem 'blurhash', '~> 0.1'
+gem 'mimemagic'
 
 gem 'active_model_serializers', '~> 0.10'
 gem 'addressable', '~> 2.8'
