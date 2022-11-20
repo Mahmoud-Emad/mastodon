@@ -38,6 +38,8 @@
 #  webauthn_id               :string
 #  sign_up_ip                :inet
 #  role_id                   :bigint(8)
+#  provider                  :string
+#  uid                       :string
 #
 
 class User < ApplicationRecord

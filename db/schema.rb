@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_04_133904) do
+ActiveRecord::Schema.define(version: 2022_11_20_182642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1060,6 +1060,8 @@ ActiveRecord::Schema.define(version: 2022_11_04_133904) do
     t.inet "sign_up_ip"
     t.boolean "skip_sign_in_token"
     t.bigint "role_id"
+    t.string "provider"
+    t.string "uid"
     t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["created_by_application_id"], name: "index_users_on_created_by_application_id", where: "(created_by_application_id IS NOT NULL)"

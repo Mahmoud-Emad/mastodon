@@ -96,6 +96,7 @@ gem 'webpush', github: 'ClearlyClaire/webpush', ref: 'f14a4d52e201128b1b00245d11
 gem 'webauthn', '~> 2.5'
 
 gem 'json-ld'
+gem 'rbnacl', :git => 'https://github.com/RubyCrypto/rbnacl.git', :ref => '3fb9eb2'
 gem 'json-ld-preloaded', '~> 3.2'
 gem 'rdf-normalize', '~> 0.5'
 
