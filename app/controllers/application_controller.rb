@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
   helper_method :single_user_mode?
   helper_method :use_seamless_external_login?
   helper_method :whitelist_mode?
+  helper_method :is_threefold_connect_login?
 
   rescue_from ActionController::ParameterMissing, Paperclip::AdapterRegistry::NoHandlerError, with: :bad_request
   rescue_from Mastodon::NotPermittedError, with: :forbidden
@@ -112,6 +113,10 @@ class ApplicationController < ActionController::Base
 
   def use_seamless_external_login?
     Devise.pam_authentication || Devise.ldap_authentication
+  end
+  
+  def is_threefold_connect_login?
+    return true if ENV["IS_TF_CONNECT"] == "true"
   end
 
   def current_account
